@@ -40,6 +40,8 @@
             this.tsmiDeleteAllJobs = new System.Windows.Forms.ToolStripMenuItem();
             this.timerRefresh = new System.Windows.Forms.Timer(this.components);
             this.btnAbout = new System.Windows.Forms.Button();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiOpenFileLocation = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPrimary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
             this.cmsJobs.SuspendLayout();
@@ -103,21 +105,23 @@
             // 
             this.cmsJobs.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiDeleteJob,
-            this.tsmiDeleteAllJobs});
+            this.tsmiDeleteAllJobs,
+            this.toolStripMenuItem1,
+            this.tsmiOpenFileLocation});
             this.cmsJobs.Name = "cmsJobs";
-            this.cmsJobs.Size = new System.Drawing.Size(151, 48);
+            this.cmsJobs.Size = new System.Drawing.Size(181, 98);
             // 
             // tsmiDeleteJob
             // 
             this.tsmiDeleteJob.Name = "tsmiDeleteJob";
-            this.tsmiDeleteJob.Size = new System.Drawing.Size(150, 22);
+            this.tsmiDeleteJob.Size = new System.Drawing.Size(180, 22);
             this.tsmiDeleteJob.Text = "Delete Job";
             this.tsmiDeleteJob.Click += new System.EventHandler(this.ToolStripMenuItemClick);
             // 
             // tsmiDeleteAllJobs
             // 
             this.tsmiDeleteAllJobs.Name = "tsmiDeleteAllJobs";
-            this.tsmiDeleteAllJobs.Size = new System.Drawing.Size(150, 22);
+            this.tsmiDeleteAllJobs.Size = new System.Drawing.Size(180, 22);
             this.tsmiDeleteAllJobs.Text = "Delete All Jobs";
             this.tsmiDeleteAllJobs.Click += new System.EventHandler(this.ToolStripMenuItemClick);
             // 
@@ -135,6 +139,18 @@
             this.btnAbout.Text = "button4";
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.ButtonClick);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // tsmiOpenFileLocation
+            // 
+            this.tsmiOpenFileLocation.Name = "tsmiOpenFileLocation";
+            this.tsmiOpenFileLocation.Size = new System.Drawing.Size(180, 22);
+            this.tsmiOpenFileLocation.Text = "Open File Location";
+            this.tsmiOpenFileLocation.Click += new System.EventHandler(this.ToolStripMenuItemClick);
             // 
             // MainForm
             // 
@@ -170,6 +186,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDeleteAllJobs;
         internal System.Windows.Forms.Timer timerRefresh;
         internal System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiOpenFileLocation;
     }
 }
 

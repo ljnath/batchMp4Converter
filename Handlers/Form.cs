@@ -25,19 +25,18 @@ namespace BatchMp4Converter.Handlers
             mainform.dgvJobs.AllowUserToDeleteRows = false;
             mainform.dgvJobs.AllowUserToResizeRows = false;
             mainform.dgvJobs.AllowUserToOrderColumns = false;
-            mainform.dgvJobs.AllowUserToResizeColumns = false;
 
-            mainform.dgvJobs.Columns.Add("serial", "Serial No.");
-            mainform.dgvJobs.Columns.Add("id", "Job ID");
-            mainform.dgvJobs.Columns.Add("inputVideo", "Input Video");
-            mainform.dgvJobs.Columns.Add("inputSize", "Size (in MB)");
-            mainform.dgvJobs.Columns.Add("ouptutVideo", "Output Video");
-            mainform.dgvJobs.Columns.Add("outputSize", "Size (in MB)");
+            mainform.dgvJobs.Columns.Add("jobId", "Job ID");
+            mainform.dgvJobs.Columns.Add("id", "Internal Job ID");
+            mainform.dgvJobs.Columns.Add("inputVideo", "Input Video Path");
+            mainform.dgvJobs.Columns.Add("inputSize", "Size");
+            mainform.dgvJobs.Columns.Add("ouptutVideo", "Output Video Path");
+            mainform.dgvJobs.Columns.Add("outputSize", "Size");
             mainform.dgvJobs.Columns.Add("status", "Status");
 
-            mainform.dgvJobs.Columns[0].Width = 25;
+            mainform.dgvJobs.Columns[0].Width = 20;
             mainform.dgvJobs.Columns[1].Visible = false;
-            mainform.dgvJobs.Columns[3].Width = mainform.dgvJobs.Columns[5].Width = 40;
+            mainform.dgvJobs.Columns[3].Width = mainform.dgvJobs.Columns[5].Width = 30;
             mainform.dgvJobs.Columns[6].Width = 70;
 
             mainform.btnAdd.Text = "&Add Job(s)";

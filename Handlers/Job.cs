@@ -39,12 +39,12 @@ namespace BatchMp4Converter.Handlers
         internal void LoadFromFile()
         {
             Jobs jobs = new Jobs();
-            if (File.Exists(Data.JobsFile))
+            if (File.Exists(Data.JobsDbFile))
             {
                 BinaryFormatter binaryFormatter = new BinaryFormatter();
                 try
                 {
-                    FileStream fileStream = new FileStream(Data.JobsFile, FileMode.Open, FileAccess.Read, FileShare.None);
+                    FileStream fileStream = new FileStream(Data.JobsDbFile, FileMode.Open, FileAccess.Read, FileShare.None);
                     using (fileStream)
                     {
                         jobs = (Jobs)binaryFormatter.Deserialize(fileStream);
@@ -61,7 +61,7 @@ namespace BatchMp4Converter.Handlers
         internal void SaveToFile()
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-            FileStream fileStream = new FileStream(Data.JobsFile, FileMode.Create, FileAccess.Write, FileShare.None);
+            FileStream fileStream = new FileStream(Data.JobsDbFile, FileMode.Create, FileAccess.Write, FileShare.None);
             using (fileStream)
             {
                 binaryFormatter.Serialize(fileStream, Data.Jobs);
@@ -132,7 +132,7 @@ namespace BatchMp4Converter.Handlers
                     {
                         sucessCount++;
                         Data.Jobs.AllJobs[i].Status = JobStatus.COMPLETED;
-                        Data.Jobs.AllJobs[i].OutputFileSize = Utility.GetFileSizeInMb(Data.Jobs.AllJobs[i].OutputVideoFile);
+                        Data.Jobs.AllJobs[i].OutputFileSize = Utility.GetReadableFileSize(Data.Jobs.AllJobs[i].OutputVideoFile);
                     }
                     else
                     {

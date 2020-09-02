@@ -8,9 +8,11 @@ namespace BatchMp4Converter
     internal static class Data
     {
         internal static string AppName { get { return "Batch MP4 Converter"; } }
-        internal static string AppVersion { get { return "1.0"; } }
-        
-        internal static string JobsFile { get { return Path.Combine(Environment.CurrentDirectory, "jobs"); } }
+        internal static string AppVersion { get { return "1.1"; } }
+        internal static string AppDownloadUrl { get { return "https://sourceforge.net/projects/batchmp4converter/files/latest/download";  } }
+        internal static string AppUpdateApi { get { return "https://app.ljnath.com/batchmp4converter"; } }
+
+        internal static string JobsDbFile { get { return Path.Combine(Environment.CurrentDirectory, "jobs"); } }
         internal static Jobs Jobs { get; set; }
         internal static Job SelectedJob { get; set; }
         

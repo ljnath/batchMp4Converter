@@ -1,5 +1,5 @@
 # BatchMp4Converter
-### Version : 1.0
+### Version : 1.1
 
 Author : Lakhya Jyoti Nath (ljnath)<br>
 Date : Sept 2020<br>
@@ -22,6 +22,8 @@ Website : https://www.ljnath.com
 - Supports batch and resume funtinality of conversion
 - 1-click start and stop process
 - Very small output filesize
+- Update notification
+
 
 ## Prerequisite
 - FFmpeg binary needs to be in the same location as the binary file.

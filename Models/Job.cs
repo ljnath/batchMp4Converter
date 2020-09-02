@@ -10,13 +10,13 @@ namespace BatchMp4Converter.Models
             Id = id;
             InputVideoFile = inputVideoFile;
             OutputVideoFile = string.Format("{0}_converted.mp4", inputVideoFile.Substring(0, inputVideoFile.LastIndexOf('.')));
-            InputFileSize = Utility.GetFileSizeInMb(inputVideoFile);
+            InputFileSize = Utility.GetReadableFileSize(inputVideoFile);
         }
         public string Id { get; }
         public string InputVideoFile { get; }
-        public decimal InputFileSize { get; }
+        public string InputFileSize { get; }
         public string OutputVideoFile { get; }
-        public decimal OutputFileSize { get; set; } = 0;
+        public string OutputFileSize { get; set; } = string.Empty;
         public JobStatus Status { get; set; } = JobStatus.WAITING;
         public bool IsWaiting
         {

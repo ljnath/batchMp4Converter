@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -43,7 +44,7 @@ namespace BatchMp4Converter.Forms
                     Handlers.Form.RefreshJobControl(btnStart);
                     break;
                 case "btnAbout":
-                    MessageBox.Show(string.Format("Q: What is this ?\nA: {0} ver. {1}\n\nQ: Who made it ?\nA: Lakhya Jyoti Nath (ljnath)\n\nQ: How to reach the developer ?\nA: ljnath@ljnath.com / www.ljnath.com", Data.AppName, Data.AppVersion), "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(string.Format("{0} {1}\n\nAuthor: Lakhya Jyoti Nath (ljnath)\nEmail: ljnath@ljnath.com\nWebsite: www.ljnath.com", Data.AppName, Data.AppVersion), "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case "btnExit":
                     Application.Exit();
@@ -63,6 +64,9 @@ namespace BatchMp4Converter.Forms
                 case "tsmiDeleteAllJobs":
                     if (MessageBox.Show("Do you really want to delete all jobs ?", Data.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         Handlers.Job.Instance.RemoveAll();
+                    break;
+                case "tsmiOpenFileLocation":
+                    Process.Start(Path.GetDirectoryName(Data.SelectedJob.InputVideoFile));
                     break;
             }
             Handlers.Form.RefreshJobList(dgvJobs);
@@ -106,6 +110,7 @@ namespace BatchMp4Converter.Forms
             Handlers.Form.RefreshJobControl(btnStart);
             timerRefresh.Enabled = true;
             timerRefresh.Stop();
+            Utility.CheckForUpdate();
         }
     }
 }
