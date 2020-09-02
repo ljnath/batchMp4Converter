@@ -33,9 +33,11 @@ namespace BatchMp4Converter.Forms
                         btnStart.Text = "Stopping...";
                         btnStart.Enabled = false;
                         Handlers.Job.Instance.Stop();
+                        tsmiDeleteJob.Enabled = tsmiDeleteAllJobs.Enabled = true;
                     }
                     else
                     {
+                        tsmiDeleteJob.Enabled = tsmiDeleteAllJobs.Enabled = false;
                         btnStart.Text = "&Stop Jobs";
                         btnAdd.Enabled = false;
                         timerRefresh.Start();
