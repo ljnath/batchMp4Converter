@@ -9,7 +9,7 @@ Website : https://www.ljnath.com
 [![Download BatchMp4Converter](https://img.shields.io/sourceforge/dt/batchmp4converter.svg)](https://sourceforge.net/projects/batchmp4converter/files/latest/download)
 [![GitHub license](https://img.shields.io/github/license/ljnath/batchMp4Converter)](https://img.shields.io/github/license/ljnath/batchMp4Converter)
 
-[![Download PyBluesky](https://sourceforge.net/sflogo.php?type=13&group_id=3215162)](https://sourceforge.net/p/ljnath/)  
+[![BatchMp4Converter Homepage](https://sourceforge.net/sflogo.php?type=13&group_id=3215162)](https://sourceforge.net/projects/batchmp4converter/)  
 
 ## Introduction
 
